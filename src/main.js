@@ -18,7 +18,18 @@ document.querySelector('#app').innerHTML = `
   <header class="site-header">
     <div class="site-header__inner">
       <a href="#top" class="logo">${esc(identity.name.split(' ')[0])} · Portofolio</a>
-      <nav class="nav" aria-label="Navigasi utama">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Buka navigasi"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Navigasi utama">
         <a href="#tentang">Tentang</a>
         <a href="#keahlian">Keahlian</a>
         <a href="#proyek">Proyek</a>
@@ -193,5 +204,35 @@ if (supportsFinePointer && !reducedMotion) {
   window.addEventListener('mousemove', (event) => {
     root.style.setProperty('--mouse-x', `${event.clientX}px`);
     root.style.setProperty('--mouse-y', `${event.clientY}px`);
+  });
+}
+
+const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('#site-nav');
+const mobileQuery = window.matchMedia('(max-width: 768px)');
+
+if (navToggle && nav) {
+  const setNavState = (isOpen) => {
+    nav.classList.toggle('is-open', isOpen);
+    navToggle.classList.toggle('is-active', isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    navToggle.setAttribute('aria-label', isOpen ? 'Tutup navigasi' : 'Buka navigasi');
+  };
+
+  setNavState(false);
+
+  navToggle.addEventListener('click', () => {
+    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+    setNavState(!isOpen);
+  });
+
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (mobileQuery.matches) setNavState(false);
+    });
+  });
+
+  mobileQuery.addEventListener('change', (e) => {
+    if (!e.matches) setNavState(false);
   });
 }

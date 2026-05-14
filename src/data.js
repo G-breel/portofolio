@@ -53,7 +53,7 @@ Aktif membangun proyek untuk memperkuat kemampuan teknis, problem solving, dan k
         'Modul wishlist dengan progres tabungan',
       ],
       links: {
-        repo: 'https://github.com/username/Capstone-projek',
+        repo: 'https://github.com/G-breel/Capstone-projek',
         demo: 'https://tabungan-qu-frontend.vercel.app',
       },
     },
