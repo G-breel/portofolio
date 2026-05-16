@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* Base */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+  background: #0b0b0f;
+  color: #ffffff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: rgba(59,130,246,0.3); color: #fff; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0b0b0f; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+
+/* Ensure hero renders */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 4rem;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 6rem 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.container-main {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Orb backgrounds */
+.orb-1 {
+  position: absolute;
+  top: 25%; left: 25%;
+  width: 24rem; height: 24rem;
+  background: rgba(59,130,246,0.10);
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+}
+.orb-2 {
+  position: absolute;
+  bottom: 25%; right: 25%;
+  width: 20rem; height: 20rem;
+  background: rgba(59,130,246,0.07);
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+}
