@@ -62,3 +62,5 @@ body {
   filter: blur(100px);
   pointer-events: none;
 }
+
+/* ── Cube CSS removed — now using Canvas via CubesBg.jsx ── */

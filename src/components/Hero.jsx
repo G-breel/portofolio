@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { profile } from '../data.js';
+import CubesBg from './CubesBg.jsx';
 
 const roles = ['Frontend Developer', 'Web Developer', 'Junior Engineer'];
 
@@ -47,6 +48,9 @@ export default function Hero() {
       {/* Orbs */}
       <div className="orb-1" />
       <div className="orb-2" />
+
+      {/* Floating Cubes Canvas */}
+      <CubesBg />
 
       <div className="hero-content">
         {/* Badge */}
