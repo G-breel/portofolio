@@ -26,11 +26,10 @@ export default function Navbar() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
           ? 'bg-[rgba(11,11,15,0.85)] backdrop-blur-xl border-b border-white/[0.06]'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <div className="max-w-5xl mx-auto px-6 w-full" style={{ height: '4rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' }}>
         <motion.a
@@ -50,11 +49,10 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               onClick={() => setActive(l.href)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                active === l.href
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${active === l.href
                   ? 'text-white bg-white/10'
                   : 'text-[#a1a1aa] hover:text-white hover:bg-white/[0.06]'
-              }`}
+                }`}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >

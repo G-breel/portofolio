@@ -83,6 +83,12 @@ Aktif membangun proyek untuk memperkuat kemampuan teknis, problem solving, dan k
 
   certifications: [
     {
+      name: 'English for Business Communication',
+      issuer: 'TBI (The British Institute), DBS Foundation, and Dicoding',
+      year: '2026',
+      url: '/english-business-communication.pdf',
+    },
+    {
       name: 'Belajar Dasar AI',
       issuer: 'Dicoding',
       year: '2025',
@@ -128,6 +134,7 @@ Aktif membangun proyek untuk memperkuat kemampuan teknis, problem solving, dan k
       name: 'Literasi Keuangan: Edukasi Pembiayaan Program CSR FIFGROUP PINTAR',
       issuer: 'FIFGROUP CSR',
       year: '2025',
+      url: '/fifgroup-literasi-keuangan.pdf',
     },
     {
       name: 'Memulai Dasar Pemrograman untuk Menjadi Pengembang Software',
